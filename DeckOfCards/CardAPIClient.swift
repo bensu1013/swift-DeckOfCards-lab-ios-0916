@@ -16,7 +16,7 @@ struct CardAPIClient {
     static let shared = CardAPIClient()
     
     
-    func shuffle(_ handler: @escaping (Bool, JSON?) -> Void) {
+    func newDeckShuffled(_ handler: @escaping (Bool, JSON?) -> Void) {
         
         let request = URLRequest(url: RequestType.shuffle.url)
         

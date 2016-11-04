@@ -32,7 +32,7 @@ extension Deck {
     
      func newDeck(_ handler: @escaping (Bool) -> Void) {
         
-        apiClient.shuffle() { [unowned self] success, json in
+        apiClient.newDeckShuffled() { [unowned self] success, json in
             
             DispatchQueue.main.async {
                 
@@ -81,8 +81,8 @@ extension Deck {
 
                 }
                 
+                handler(true, self.cards)
                 
-
             }
             
         }
