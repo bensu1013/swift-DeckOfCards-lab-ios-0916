@@ -244,6 +244,13 @@ What does this mean? (Explain in Video)
 ```
 
 
+---
+
+# ViewController
+
+```swift
+var deck = Deck()
+```
 
 
 

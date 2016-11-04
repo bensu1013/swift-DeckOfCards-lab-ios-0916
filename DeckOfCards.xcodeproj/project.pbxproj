@@ -12,10 +12,6 @@
 		7DC644471DCC0C330081E4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DC644451DCC0C330081E4CD /* Main.storyboard */; };
 		7DC644491DCC0C330081E4CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DC644481DCC0C330081E4CD /* Assets.xcassets */; };
 		7DC6444C1DCC0C330081E4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DC6444A1DCC0C330081E4CD /* LaunchScreen.storyboard */; };
-		7DC644541DCC0C680081E4CD /* CardAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC644531DCC0C680081E4CD /* CardAPIClient.swift */; };
-		7DC644561DCC0FF00081E4CD /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC644551DCC0FF00081E4CD /* Deck.swift */; };
-		7DC644581DCC17840081E4CD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC644571DCC17840081E4CD /* Card.swift */; };
-		7DC6445A1DCC3BC20081E4CD /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC644591DCC3BC20081E4CD /* RequestType.swift */; };
 		7DC6445C1DCC472B0081E4CD /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC6445B1DCC472B0081E4CD /* CardView.xib */; };
 		7DC6445E1DCC47560081E4CD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC6445D1DCC47560081E4CD /* CardView.swift */; };
 /* End PBXBuildFile section */
@@ -28,10 +24,6 @@
 		7DC644481DCC0C330081E4CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DC6444B1DCC0C330081E4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DC6444D1DCC0C330081E4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DC644531DCC0C680081E4CD /* CardAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAPIClient.swift; sourceTree = "<group>"; };
-		7DC644551DCC0FF00081E4CD /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
-		7DC644571DCC17840081E4CD /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		7DC644591DCC3BC20081E4CD /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		7DC6445B1DCC472B0081E4CD /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		7DC6445D1DCC47560081E4CD /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,10 +64,6 @@
 				7DC644481DCC0C330081E4CD /* Assets.xcassets */,
 				7DC6444A1DCC0C330081E4CD /* LaunchScreen.storyboard */,
 				7DC6444D1DCC0C330081E4CD /* Info.plist */,
-				7DC644531DCC0C680081E4CD /* CardAPIClient.swift */,
-				7DC644551DCC0FF00081E4CD /* Deck.swift */,
-				7DC644571DCC17840081E4CD /* Card.swift */,
-				7DC644591DCC3BC20081E4CD /* RequestType.swift */,
 				7DC6445B1DCC472B0081E4CD /* CardView.xib */,
 				7DC6445D1DCC47560081E4CD /* CardView.swift */,
 			);
@@ -157,12 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DC6445E1DCC47560081E4CD /* CardView.swift in Sources */,
-				7DC644561DCC0FF00081E4CD /* Deck.swift in Sources */,
 				7DC644441DCC0C330081E4CD /* ViewController.swift in Sources */,
-				7DC644581DCC17840081E4CD /* Card.swift in Sources */,
 				7DC644421DCC0C330081E4CD /* AppDelegate.swift in Sources */,
-				7DC644541DCC0C680081E4CD /* CardAPIClient.swift in Sources */,
-				7DC6445A1DCC3BC20081E4CD /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +308,7 @@
 				7DC644521DCC0C330081E4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
