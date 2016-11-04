@@ -44,7 +44,15 @@ class CardView: UIView {
         backgroundColor = UIColor.clear
     }
     
-    private func updateViewToReflectNewCard() {
+ 
+    
+}
+
+
+// MARK: - Card Methods
+extension CardView {
+    
+    fileprivate func updateViewToReflectNewCard() {
         guard !card.isDownloading else { return }
         
         if card.image == nil {
@@ -55,7 +63,7 @@ class CardView: UIView {
                     UIView.transition(with: self.imageView, duration: 0.4, options: [.allowUserInteraction, .transitionCurlDown], animations: {
                         
                         self.imageView.image = self.card.image!
-
+                        
                     }) { success in
                         
                     }
@@ -67,7 +75,10 @@ class CardView: UIView {
         }
     }
     
+    
+    
 }
+
 
 
 // MARK: - Pan Gestures

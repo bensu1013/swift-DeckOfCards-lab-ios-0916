@@ -224,6 +224,28 @@ After doing so, you should call on the `handler` argument, passing it a `true` v
 
 ---
 
+# Card View
+
+There has been some code that's been written for you. Take a look at the `CardView.xib` file. It includes a custom view that we've designed. It's associated with the `CardView.swift` file which contains a `CardView` class subclassed from `UIView`.
+
+What does all of that mean?
+
+One of the stored properties, `card` has a `didSet` property observer on it.
+
+What does this mean? (Explain in Video)
+
+```swift
+    weak var card: Card! {
+        didSet {
+            updateViewToReflectNewCard()
+        }
+        
+    }
+```
+
+
+
+
 
 
 

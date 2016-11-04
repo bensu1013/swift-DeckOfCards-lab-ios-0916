@@ -26,6 +26,7 @@ class ViewController: UIViewController {
 }
 
 
+// MARK: - Deck Delegate
 extension ViewController: DeckDelegate {
     
      func newDeckHasBeenMade(_ deck: Deck) {
@@ -58,6 +59,7 @@ extension ViewController: DeckDelegate {
 }
 
 
+// MARK: - Card View Delegate
 extension ViewController: CardViewDelegate {
     
     func canUpdateImageView(_ cardView: CardView) -> Bool {
