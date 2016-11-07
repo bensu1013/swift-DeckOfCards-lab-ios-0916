@@ -12,6 +12,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let card = Card()
+        
+        let cardView = CardView()
+        
+        cardView.card = card
     
         // TODO: Call newDeck on your deck instance property here.
         

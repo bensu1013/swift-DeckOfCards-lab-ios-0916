@@ -12,6 +12,10 @@ The ones we're most concerned with for our app are the following:
 *	Shuffle the Cards: `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`
 * 	Draw a Card: `https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=2`
 
+**FINAL PRODUCT**:
+
+[![Deck of Cards Demo](http://img.youtube.com/vi/_wLx2srsSQM/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Deck of Cards Demo")
+
 # Instructions
 
 # API
@@ -225,6 +229,8 @@ After doing so, you should call on the `handler` argument, passing it a `true` v
 ---
 
 # Card View
+
+[![Card View Instructions](http://img.youtube.com/vi/P--CeyNSim0/0.jpg)](https://www.youtube.com/watch?v=P--CeyNSim0 "Card View Instructions")
 
 There has been some code that's been written for you. Take a look at the `CardView.xib` file. It includes a custom view that we've designed. It's associated with the `CardView.swift` file which contains a `CardView` class subclassed from `UIView`.
 
