@@ -15,15 +15,6 @@ class CardView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     
-    weak var card: Card! {
-        didSet {
-            
-            updateViewToReflectNewCard()
-            
-            //TODO: Implement This
-            
-        }
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,8 +47,6 @@ extension CardView {
         
         // TODO: Update the view accordingly
         
-        
-    
     }
 
 }

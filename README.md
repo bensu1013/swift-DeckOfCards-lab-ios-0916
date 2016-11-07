@@ -70,12 +70,6 @@ As well, this class should have a stored property called `apiClient` where we as
 let apiClient = CardAPIClient.shared
 ```
 
-**=======================================**  
- weak var delegate: DeckDelegate?  
- **=======================================**  
-
-    
-
 Create a function called `newDeck(_:)`. This function takes in one argument.. which is another function! The parameter should be called `handler` (or `completion`) of type (`Bool`) -> `Void`. In your implementation of this function, you should look to call on the `newDeckShuffled` function available to your `apiClient` property. If you've setup your `newDeckShuffled` function correctly, in its completion handler you should be getting back a `JSON` object of type [`String` : `Any`]. With this `JSON` object, you should look to update all of your stored properties with the various `values` that are part of the dictionary.
 
 **NOTE:** You might notice something. Our stored properties won't have values assigned to them at this point, so how can we possibly call on an instance method if we don't have an `init` function setup? Instead of making an `init` function, the stored properties should be implicitly unwrapped optionals. 
@@ -91,29 +85,6 @@ let apiClient = CardAPIClient.shared
 ```
 
 After assigning values from the `JSON` object to the various stored properties, call on the `handler` argument and pass it the `true` value signifying that our deck is fully setup.
-
-
-```swift
-     func newDeck(_ handler: @escaping (Bool) -> Void) {
-        
-        apiClient.newDeckShuffled() { [unowned self] success, json in
-            
-                
-            
-     **=======================================**  
-
-                self.delegate?.newDeckHasBeenMade(self)
-               
-**=======================================**  
-
-                
-                
-            }
-        }
-    }
-```
-
-Lets step away from the `Deck` class for now.
 
 
 ---
@@ -230,15 +201,10 @@ After doing so, you should call on the `handler` argument, passing it a `true` v
 
 # Card View
 
-[![Card View Instructions](http://img.youtube.com/vi/P--CeyNSim0/0.jpg)](https://www.youtube.com/watch?v=P--CeyNSim0 "Card View Instructions")
-
 There has been some code that's been written for you. Take a look at the `CardView.xib` file. It includes a custom view that we've designed. It's associated with the `CardView.swift` file which contains a `CardView` class subclassed from `UIView`.
 
-What does all of that mean?
+Create the following stored property in the `CardView.swift` file.
 
-One of the stored properties, `card` has a `didSet` property observer on it.
-
-What does this mean? (Explain in Video)
 
 ```swift
     weak var card: Card! {
@@ -249,13 +215,51 @@ What does this mean? (Explain in Video)
     }
 ```
 
+**Watch this video for further instruction**:
+
+[![Card View Instructions](http://img.youtube.com/vi/P--CeyNSim0/0.jpg)](https://www.youtube.com/watch?v=P--CeyNSim0 "Card View Instructions")
+
 
 ---
 
 # ViewController
 
+Create the following stored property in the `ViewController.swift` file.
+
 ```swift
 var deck = Deck()
+```
+
+Take a look at the TODO: comments. It's up to you how you want to finish this project. I have it setup where when someone taps the Draw button, it will place a card randomly on the screen after making the appropriate API call.
+
+Here's how I place the `Card` on screen using the `CardView`.
+
+You can attempt to try this out on your own before looking at this hint.
+
+**Hint:**
+
+```swift
+    func newCardDealt(_ card: Card) {
+        
+        let viewHeight = view.frame.size.height
+        let cardViewHeight = viewHeight * 0.2
+        let percentage: CGFloat = 226 / 314
+        let cardViewWidth = cardViewHeight * percentage
+
+        let minX = 0 + (cardViewWidth / 2)
+        let maxX = view.frame.size.width - (cardViewWidth)
+        let minY = 0 + (cardViewHeight / 2)
+        let maxY = view.frame.size.height - (cardViewHeight)
+        
+        let randomX = CGFloat(arc4random_uniform(UInt32(maxX - minX))) + minX
+        let randomY = CGFloat(arc4random_uniform(UInt32(maxY - minY))) + minY
+        
+        let cardView = CardView(frame: CGRect(x: randomX, y: randomY, width: cardViewWidth, height: cardViewHeight))
+        view.addSubview(cardView)
+
+        cardView.delegate = self
+        cardView.card = card
+    }
 ```
 
 
