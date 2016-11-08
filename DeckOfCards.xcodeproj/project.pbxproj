@@ -14,6 +14,9 @@
 		7DC6444C1DCC0C330081E4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DC6444A1DCC0C330081E4CD /* LaunchScreen.storyboard */; };
 		7DC6445C1DCC472B0081E4CD /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC6445B1DCC472B0081E4CD /* CardView.xib */; };
 		7DC6445E1DCC47560081E4CD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC6445D1DCC47560081E4CD /* CardView.swift */; };
+		B5680D891DD1365300F11BF2 /* CardAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5680D881DD1365300F11BF2 /* CardAPIClient.swift */; };
+		B5680D8B1DD13A3E00F11BF2 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5680D8A1DD13A3E00F11BF2 /* Deck.swift */; };
+		B5680D8D1DD13BB600F11BF2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5680D8C1DD13BB600F11BF2 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		7DC6444D1DCC0C330081E4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DC6445B1DCC472B0081E4CD /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		7DC6445D1DCC47560081E4CD /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B5680D881DD1365300F11BF2 /* CardAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardAPIClient.swift; sourceTree = "<group>"; };
+		B5680D8A1DD13A3E00F11BF2 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		B5680D8C1DD13BB600F11BF2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				7DC6444D1DCC0C330081E4CD /* Info.plist */,
 				7DC6445B1DCC472B0081E4CD /* CardView.xib */,
 				7DC6445D1DCC47560081E4CD /* CardView.swift */,
+				B5680D881DD1365300F11BF2 /* CardAPIClient.swift */,
+				B5680D8A1DD13A3E00F11BF2 /* Deck.swift */,
+				B5680D8C1DD13BB600F11BF2 /* Card.swift */,
 			);
 			path = DeckOfCards;
 			sourceTree = "<group>";
@@ -102,7 +111,6 @@
 				TargetAttributes = {
 					7DC6443D1DCC0C320081E4CD = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3E2QGNXM7N;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -145,6 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DC6445E1DCC47560081E4CD /* CardView.swift in Sources */,
+				B5680D8D1DD13BB600F11BF2 /* Card.swift in Sources */,
+				B5680D891DD1365300F11BF2 /* CardAPIClient.swift in Sources */,
+				B5680D8B1DD13A3E00F11BF2 /* Deck.swift in Sources */,
 				7DC644441DCC0C330081E4CD /* ViewController.swift in Sources */,
 				7DC644421DCC0C330081E4CD /* AppDelegate.swift in Sources */,
 			);
@@ -212,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -255,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -267,7 +278,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3E2QGNXM7N;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DeckOfCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gamesmith.Swift.DeckOfCards;
@@ -280,7 +292,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3E2QGNXM7N;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DeckOfCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gamesmith.Swift.DeckOfCards;
@@ -299,7 +312,7 @@
 				7DC6444F1DCC0C330081E4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		7DC644501DCC0C330081E4CD /* Build configuration list for PBXNativeTarget "DeckOfCards" */ = {
 			isa = XCConfigurationList;
@@ -308,7 +321,7 @@
 				7DC644521DCC0C330081E4CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
